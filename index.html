@@ -13,7 +13,7 @@
     </header>
     <section>
         <div class = "container">
-            <form action="#" method="GET">
+            <form action="#" method="GET" id="resume">
                 <div class="contact-information">
                     <h2>Contact Information</h2>
                     <div>
@@ -40,14 +40,14 @@
                         <input type="text" name="objective" id="objective">
                     </div>
                 </div>
-                <div class="education">
+                <div id="education">
                     <h2>Education</h2>
                     <div>
                         <label for="schoolName">School Name</label>
                         <input type="text" name="schoolName" id="schoolName">
                     </div>
                     <div>
-                        <label for="degree">Degree or Certificate:</label>
+                        <label for="degree">Degree or Certificate</label>
                         <input type="text" name="degree" id="degree">
                     </div>
                     <div>
@@ -55,7 +55,7 @@
                         <input type="text" name="graduation" id="graduation">
                     </div>
                     <div>
-                        <button>Add School</button>
+                        <button id = "add-school">Add School</button>
                     </div>
                 </div>
                 <div class="experience">
@@ -73,7 +73,7 @@
                         <input type="text" name="description" id="description">
                     </div>
                     <div>
-                        <button>Add Work Experience</button>
+                        <button class="add-experience">Add Work Experience</button>
                     </div>
                 </div>
                 <div class="skills">
@@ -83,11 +83,12 @@
                         <input type="text" name="skill" id="skill">
                     </div>
                     <div>
-                        <button>Add Skill</button>
+                        <button class="add-skill">Add Skill</button>
                     </div>
                 </div>
             </form>
         </div>
     </section>
+    <script src="MyResume.js"></script>
 </body>
 </html>
