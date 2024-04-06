@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyResume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MyResume</h1>
+        <a class="home" href="index.html"><button class="home">Home</button></a>
+    </header>
+    <section>
+        <div class = "container">
+            <form action="#" method="GET" id="resume">
+                <div class="contact-information">
+                    <h2>Contact Information</h2>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                    </div>
+                    <div>
+                        <button class = "next">Next</button>
+                    </div>
+                </div>
+                <div class="objective-statement">
+                    <h2>Objective Statement</h2>
+                    <div>
+                        <label for="objective">Objective Statement</label>
+                        <input type="text" name="objective" id="objective">
+                    </div>
+                    <div>
+                        <button class = "back">Back</button>
+                        <button class = "next">Next</button>
+                    </div>
+                </div>
+                <div id="education">
+                    <h2>Education</h2>
+                    <div>
+                        <label for="schoolName">School Name</label>
+                        <input type="text" name="schoolName" id="schoolName">
+                    </div>
+                    <div>
+                        <label for="degree">Degree or Certificate</label>
+                        <input type="text" name="degree" id="degree">
+                    </div>
+                    <div>
+                        <label for="graduation">Graduation Year</label>
+                        <input type="text" name="graduation" id="graduation">
+                    </div>
+                    <div>
+                        <button id = "add-school">Add School</button>
+                    </div>
+                    <div>
+                        <button class = "back">Back</button>
+                        <button class = "next">Next</button>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <div>
+                        <label for="title">Job Title</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div>
+                        <label for="Employer Name">Employer Name</label>
+                        <input type="text" name="Employer Name" id="Employer Name">
+                    </div>
+                    <div>
+                        <label for="description">Role Description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <button class="add-experience">Add Work Experience</button>
+                    </div>
+                    <div>
+                        <button class = "back">Back</button>
+                        <button class = "next">Next</button>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div>
+                        <label for="skill">Skill</label>
+                        <input type="text" name="skill" id="skill">
+                    </div>
+                    <div>
+                        <button class="add-skill">Add Skill</button>
+                    </div>
+                    <div>
+                        <button class = "back">Back</button>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="MyResume.js"></script>
+</body>
+</html>
