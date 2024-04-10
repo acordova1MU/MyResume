@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -43,17 +47,90 @@ section{
     flex-direction: column;
     justify-content:space-around;
     align-items: center;
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 700px;
     border: rgb(131, 131, 131);
     border-style: solid;
-    padding: 50px;
-    margin: 100px 500px;
+    border-radius: 20px;
 }
+
+h2{
+    color:rgb(131, 131, 131);
+}
+
 .step{
     display: none;
 }
 
 .step.active{
     display: block;
+}
+
+.contact-information h2{
+    padding-bottom: 25px;
+}
+
+.contact-information label {
+    font-size: 18px;
+    display: block;
+}
+
+.contact-information input{
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 2px;
+    height: 35px;
+    width: 250px;
+    margin: 15px 5px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.next{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    width: 130px;
+    color: white;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.back{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    width: 130px;
+    color: white;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.objective-statement h2{
+    padding-bottom: 25px;
+}
+
+.objective-statement label {
+    font-size: 18px;
+    display: block;
+}
+
+.objective-statement textarea{
+    resize: none;
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 400px;
+    height: 100px;
 }

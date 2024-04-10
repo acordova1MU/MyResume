@@ -52,7 +52,6 @@ function deleteSchool() {
     this.parentElement.remove();
 }
 
-
 addSchoolBtn.addEventListener("click", addSchool);
 
 //Dynamic Multi-Step Form Functionality
