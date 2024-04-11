@@ -83,8 +83,20 @@ h2{
     height: 35px;
     width: 250px;
     margin: 15px 5px;
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
+}
+
+.contact-information select{
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 2px;
+    height: 35px;
+    width: 250px;
+    margin: 15px 5px;
+    font-size: 14px;
+    padding: 8px;
 }
 
 .next{
@@ -133,4 +145,154 @@ h2{
     padding: 10px;
     width: 400px;
     height: 100px;
+}
+
+.education h2{
+    padding-bottom: 25px;
+}
+
+.education label{
+    font-size: 18px;
+    display: block;
+}
+
+.education input{
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 2px;
+    height: 35px;
+    width: 250px;
+    margin: 15px 5px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.add-school{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    height: 40px;
+    width: 50px;
+    color: white;
+    background-color: rgb(0, 150, 209);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.del-school{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    height: 40px;
+    width: 50px;
+    color: white;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.experience h2{
+    padding-bottom: 25px;
+}
+
+.experience label{
+    font-size: 18px;
+    display: block;
+}
+
+.experience input{
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 2px;
+    height: 35px;
+    width: 250px;
+    margin: 15px 5px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.add-experience{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    height: 40px;
+    width: 50px;
+    color: white;
+    background-color: rgb(0, 150, 209);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.del-experience{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    height: 40px;
+    width: 50px;
+    color: white;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.experience textarea{
+    resize: none;
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+}
+
+.skills h2{
+    padding-bottom: 25px;
+}
+
+.skills label{
+    font-size: 18px;
+    display: block;
+}
+
+.skills input{
+    border-radius: 20px;
+    border-color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 2px;
+    height: 35px;
+    width: 250px;
+    margin: 15px 5px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.add-skill{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    height: 40px;
+    width: 50px;
+    color: white;
+    background-color: rgb(0, 150, 209);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }

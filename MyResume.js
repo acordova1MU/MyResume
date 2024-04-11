@@ -1,6 +1,8 @@
 //Creating Dynamic Fields
+//Education
 const addSchoolBtn = document.querySelector("form .add-school");
 const education = document.querySelector("form .education");
+const eduBtns = document.querySelector("form .education-buttons")
 
 function addSchool(){
     //Add School Label and Input Elements
@@ -10,7 +12,6 @@ function addSchool(){
     addSchoolNameLabel.setAttribute("for", "schoolName");
     addSchoolNameLabel.innerHTML = "School Name ";
     addSchoolName.type="text";
-    addSchoolName.setAttribute("placeholder", "School Name");
 
     //Add Degree Label and Input Elements
     var addDegree = document.createElement("input");
@@ -19,7 +20,6 @@ function addSchool(){
     addDegreeLabel.setAttribute("for", "degree");
     addDegreeLabel.innerHTML = "Degree or Certificate ";
     addDegree.type="text";
-    addDegree.setAttribute("placeholder", "Degree");
 
     //Add Graduation Year Label and Input Elements
     var addGraduation = document.createElement("input");
@@ -28,12 +28,18 @@ function addSchool(){
     addGraduationLabel.setAttribute("for", "degree");
     addGraduationLabel.innerHTML = "Graduation Year ";
     addGraduation.type="text";
-    addGraduation.setAttribute("placeholder", "Graduation Year");
 
     //Add Delete Button
     var deleteBtn = document.createElement("button")
-    deleteBtn.innerHTML = "Delete School";
+    deleteBtn.innerHTML = "-";
+    deleteBtn.className = "del-school";
     deleteBtn.addEventListener("click", deleteSchool);
+
+    //Add Button
+    var addBtn = document.createElement("button")
+    addBtn.innerHTML = "+";
+    addBtn.className = "add-school";
+    addBtn.addEventListener("click", addSchool);
 
     //Adding Div
     const educationDiv = document.createElement("div");
@@ -43,15 +49,76 @@ function addSchool(){
     educationDiv.appendChild(addDegree);
     educationDiv.appendChild(addGraduationLabel);
     educationDiv.appendChild(addGraduation);
-    educationDiv.appendChild(deleteBtn)
+    educationDiv.appendChild(deleteBtn);
+    educationDiv.appendChild(addBtn);
     education.appendChild(educationDiv);
-    educationDiv.before(addSchoolBtn)
+    educationDiv.before(eduBtns);
 }
 
 function deleteSchool() {
     this.parentElement.remove();
 }
 
+//Work Experience
+const addExperienceBtn = document.querySelector("form .add-experience");
+const experience = document.querySelector("form .experience");
+const expBtns = document.querySelector("form .experience-buttons")
+
+function addExperience(){
+    //Add School Label and Input Elements
+    var addJobTitle = document.createElement("input");
+    var addJobTitleLabel = document.createElement("label");
+
+    addJobTitleLabel.setAttribute("for", "title");
+    addJobTitleLabel.innerHTML = "Job Title ";
+    addJobTitle.type="text";
+
+    //Add Degree Label and Input Elements
+    var addEmployer = document.createElement("input");
+    var addEmployerLabel = document.createElement("label");
+
+    addEmployerLabel.setAttribute("for", "employer");
+    addEmployerLabel.innerHTML = "Employer Name ";
+    addEmployer.type="text";
+
+    //Add Graduation Year Label and Input Elements
+    var addDescription = document.createElement("textarea");
+    var addDescriptionLabel = document.createElement("label");
+
+    addDescriptionLabel.setAttribute("for", "description");
+    addDescriptionLabel.innerHTML = "Role Description ";
+
+    //Add Delete Button
+    var deleteExpBtn = document.createElement("button")
+    deleteExpBtn.innerHTML = "-";
+    deleteExpBtn.className = "del-experience";
+    deleteExpBtn.addEventListener("click", deleteExperience);
+
+    //Add Button
+    var addExpBtn = document.createElement("button")
+    addExpBtn.innerHTML = "+";
+    addExpBtn.className = "add-experience";
+    addExpBtn.addEventListener("click", addExperience);
+
+    //Adding Div
+    const experienceDiv = document.createElement("div");
+    experienceDiv.appendChild(addJobTitleLabel);
+    experienceDiv.appendChild(addJobTitle);
+    experienceDiv.appendChild(addEmployerLabel);
+    experienceDiv.appendChild(addEmployer);
+    experienceDiv.appendChild(addDescriptionLabel);
+    experienceDiv.appendChild(addDescription);
+    experienceDiv.appendChild(deleteExpBtn);
+    experienceDiv.appendChild(addExpBtn);
+    experience.appendChild(experienceDiv);
+    experienceDiv.before(expBtns);
+}
+
+function deleteExperience() {
+    this.parentElement.remove();
+}
+
+addExperienceBtn.addEventListener("click", addExperience);
 addSchoolBtn.addEventListener("click", addSchool);
 
 //Dynamic Multi-Step Form Functionality
