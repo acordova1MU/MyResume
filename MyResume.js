@@ -30,33 +30,39 @@ function addSchool(){
     addGraduation.type="text";
 
     //Add Delete Button
-    var deleteBtn = document.createElement("button")
+    var deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "-";
     deleteBtn.className = "del-school";
     deleteBtn.addEventListener("click", deleteSchool);
 
     //Add Button
-    var addBtn = document.createElement("button")
+    var addBtn = document.createElement("button");
     addBtn.innerHTML = "+";
     addBtn.className = "add-school";
     addBtn.addEventListener("click", addSchool);
 
+    //Add and Del Education Button Div for Styling
+    const createdBtnsDiv = document.createElement("div");
+    createdBtnsDiv.className = "education-add";
+    createdBtnsDiv.appendChild(deleteBtn);
+    createdBtnsDiv.appendChild(addBtn);
+
     //Adding Div
     const educationDiv = document.createElement("div");
+    educationDiv.className = "created-education";
     educationDiv.appendChild(addSchoolNameLabel)
     educationDiv.appendChild(addSchoolName);
     educationDiv.appendChild(addDegreeLabel);
     educationDiv.appendChild(addDegree);
     educationDiv.appendChild(addGraduationLabel);
     educationDiv.appendChild(addGraduation);
-    educationDiv.appendChild(deleteBtn);
-    educationDiv.appendChild(addBtn);
+    educationDiv.appendChild(createdBtnsDiv);
     education.appendChild(educationDiv);
     educationDiv.before(eduBtns);
 }
 
 function deleteSchool() {
-    this.parentElement.remove();
+    this.parentElement.parentElement.remove();
 }
 
 //Work Experience
@@ -100,6 +106,12 @@ function addExperience(){
     addExpBtn.className = "add-experience";
     addExpBtn.addEventListener("click", addExperience);
 
+    //Add and Del Experience Button Div for Styling
+    const createdExpBtnsDiv = document.createElement("div");
+    createdExpBtnsDiv.className = "experience-add";
+    createdExpBtnsDiv.appendChild(deleteExpBtn);
+    createdExpBtnsDiv.appendChild(addExpBtn);
+
     //Adding Div
     const experienceDiv = document.createElement("div");
     experienceDiv.appendChild(addJobTitleLabel);
@@ -108,14 +120,13 @@ function addExperience(){
     experienceDiv.appendChild(addEmployer);
     experienceDiv.appendChild(addDescriptionLabel);
     experienceDiv.appendChild(addDescription);
-    experienceDiv.appendChild(deleteExpBtn);
-    experienceDiv.appendChild(addExpBtn);
+    experienceDiv.appendChild(createdExpBtnsDiv)
     experience.appendChild(experienceDiv);
     experienceDiv.before(expBtns);
 }
 
 function deleteExperience() {
-    this.parentElement.remove();
+    this.parentElement.parentElement.remove();
 }
 
 addExperienceBtn.addEventListener("click", addExperience);

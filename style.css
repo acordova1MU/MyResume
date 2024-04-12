@@ -46,12 +46,30 @@ section{
     display: flex;
     flex-direction: column;
     justify-content:space-around;
+    position: relative;
     align-items: center;
-    width: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 1200px;
     height: 700px;
     border: rgb(131, 131, 131);
     border-style: solid;
     border-radius: 20px;
+    padding: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 20px rgba(77, 77, 77, 0.5); 
+    overflow: hidden;
 }
 
 h2{
@@ -168,6 +186,11 @@ h2{
     padding: 10px;
 }
 
+.education-add{
+    display: flex;
+    flex-direction: row;
+}
+
 .add-school{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
@@ -180,6 +203,8 @@ h2{
     border-radius: 50px;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
 }
 
 .del-school{
@@ -231,6 +256,8 @@ h2{
     border-radius: 50px;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
 }
 
 .del-experience{
@@ -247,6 +274,11 @@ h2{
     margin-bottom: 20px;
     margin-right: 10px;
     margin-left: 5px;
+}
+
+.experience-add{
+    display: flex;
+    flex-direction: row;
 }
 
 .experience textarea{
