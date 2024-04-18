@@ -2,7 +2,8 @@
 //Education
 const addSchoolBtn = document.querySelector("form .add-school");
 const education = document.querySelector("form .education");
-const eduBtns = document.querySelector("form .education-buttons")
+const eduBtns = document.querySelector("form .education-buttons");
+const submitBtn = document.querySelector("submit");
 
 function addSchool(){
     //Add School Label and Input Elements
@@ -34,12 +35,14 @@ function addSchool(){
     deleteBtn.innerHTML = "-";
     deleteBtn.className = "del-school";
     deleteBtn.addEventListener("click", deleteSchool);
+    deleteBtn.type = "button"
 
     //Add Button
     var addBtn = document.createElement("button");
     addBtn.innerHTML = "+";
     addBtn.className = "add-school";
     addBtn.addEventListener("click", addSchool);
+    addBtn.type = "button"
 
     //Add and Del Education Button Div for Styling
     const createdBtnsDiv = document.createElement("div");
@@ -99,12 +102,14 @@ function addExperience(){
     deleteExpBtn.innerHTML = "-";
     deleteExpBtn.className = "del-experience";
     deleteExpBtn.addEventListener("click", deleteExperience);
+    deleteExpBtn.type = "button";
 
     //Add Button
     var addExpBtn = document.createElement("button")
     addExpBtn.innerHTML = "+";
     addExpBtn.className = "add-experience";
     addExpBtn.addEventListener("click", addExperience);
+    addExpBtn.type = "button";
 
     //Add and Del Experience Button Div for Styling
     const createdExpBtnsDiv = document.createElement("div");
@@ -133,10 +138,10 @@ addExperienceBtn.addEventListener("click", addExperience);
 addSchoolBtn.addEventListener("click", addSchool);
 
 //Dynamic Multi-Step Form Functionality
-const steps =Array.from(document.querySelectorAll("form .step"));
+const steps = Array.from(document.querySelectorAll("form .step"));
 const nextBtn = document.querySelectorAll("form .next");
 const backBtn = document.querySelectorAll("form .back");
-const form =document.querySelector("form");
+const form = document.querySelector("form");
 
 nextBtn.forEach(button=>{
     button.addEventListener("click", (e) => {
@@ -162,4 +167,18 @@ function changeStep(btn) {
     }
 
     steps[index].classList.add("active");
+    console.log(btn)
+    console.log(active)
 }
+
+//Form Data
+function getData()
+{
+    //gettting the values
+    var objective = document.getElementById("objective");
+    //saving the values in local storage
+    localStorage.setItem("objective", objective);
+    console.log("hello this is ", objective)
+}
+
+submitBtn.addEventListener('click', getData);
