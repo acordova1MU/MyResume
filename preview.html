@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyResume</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="preview.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
@@ -12,9 +13,22 @@
         <a class="home" href="index.html"><button class="home">Home</button></a>
     </header>
     <section>
-        <div class = "container">
+        <div id = "resume-container">
+            <h2><span id="name"></span></h2>
+            <p class="contact-info"><span id="address"></span> <span id="city"></span>, <span id="state"></span> &#x2022; <span id="phone"></span> &#x2022; <span id="email"></span></p>
+            <h3 class="objective">Objective</h3>
+            <p class="objective"><span id="objective"></span></p>
+            <h3 class="education">Education</h3>
+            <p class="education"><span id="objective"></span></p>
         </div>
+        <button class="pdf" onclick="generatePDF()">Save as PDF</button>
     </section>
-    <script src="MyResume.js"></script>
+    <script>
+        function generatePDF(){
+            var element = document.getElementById("resume-container");
+            html2pdf(element);
+        }
+    </script>
+    <script src="preview.js"></script>
 </body>
 </html>

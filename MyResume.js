@@ -172,13 +172,125 @@ function changeStep(btn) {
 }
 
 //Form Data
-function getData()
-{
-    //gettting the values
-    var objective = document.getElementById("objective");
-    //saving the values in local storage
-    localStorage.setItem("objective", objective);
-    console.log("hello this is ", objective)
-}
 
-submitBtn.addEventListener('click', getData);
+//Contact Info
+const formResume = document.getElementById('resume');
+const nameForm = document.getElementById('name');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const address = document.getElementById('address');
+const city = document.getElementById('city');
+const state = document.getElementById('state');
+
+//Objective Statement
+const objective = document.getElementById('objective');
+
+//Education
+const schoolName = document.getElementById('schoolName');
+const degree = document.getElementById('degree');
+const graduation = document.getElementById('graduation');
+
+const schoolName2 = document.getElementById('schoolName2');
+const degree2 = document.getElementById('degree2');
+const graduation2 = document.getElementById('graduation2');
+
+const schoolName3 = document.getElementById('schoolName3');
+const degree3 = document.getElementById('degree3');
+const graduation3 = document.getElementById('graduation3');
+
+//Experience
+const title = document.getElementById('title');
+const employer = document.getElementById('employer');
+const description = document.getElementById('description');
+
+const title2 = document.getElementById('title2');
+const employer2 = document.getElementById('employer2');
+const description2 = document.getElementById('description2');
+
+const title3 = document.getElementById('title3');
+const employer3 = document.getElementById('employer3');
+const description3 = document.getElementById('description3');
+
+//Skills
+const skill = document.getElementById('skill');
+
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    //Contact Information
+    const nameValue = nameForm.value;
+    const emailValue = email.value;
+    const phoneValue = phone.value;
+    const addressValue = address.value;
+    const cityValue = city.value;
+    const stateValue = state.value;
+    
+    //Objective Statement
+    const objectiveValue = objective.value;
+    
+    //Education
+    const schoolNameValue = schoolName.value;
+    const degreeValue = degree.value;
+    const graduationValue = graduation.value;
+
+    const schoolNameValue2 = schoolName2.value;
+    const degreeValue2 = degree2.value;
+    const graduationValue2 = graduation2.value;
+
+    const schoolNameValue3 = schoolName3.value;
+    const degreeValue3 = degree3.value;
+    const graduationValue3 = graduation3.value;
+    
+    //Experience
+    const titleValue = title.value;
+    const employerValue = employer.value;
+    const descriptionValue = description.value;
+
+    const titleValue2 = title2.value;
+    const employerValue2 = employer2.value;
+    const descriptionValue2 = description2.value;
+
+    const titleValue3 = title3.value;
+    const employerValue3 = employer3.value;
+    const descriptionValue3 = description3.value;
+    
+    //Skills
+    const skillValue = skill.value;
+
+    localStorage.setItem('name', nameValue);
+    localStorage.setItem('email', emailValue);
+    localStorage.setItem('phone', phoneValue);
+    localStorage.setItem('address', addressValue);
+    localStorage.setItem('city', cityValue);
+    localStorage.setItem('state', stateValue);
+
+    localStorage.setItem('objective', objectiveValue);
+
+    localStorage.setItem('school', schoolNameValue);
+    localStorage.setItem('degree', degreeValue);
+    localStorage.setItem('graduation', graduationValue);
+
+    localStorage.setItem('school2', schoolNameValue2);
+    localStorage.setItem('degree2', degreeValue2);
+    localStorage.setItem('graduation2', graduationValue2);
+
+    localStorage.setItem('school3', schoolNameValue3);
+    localStorage.setItem('degree3', degreeValue3);
+    localStorage.setItem('graduation3', graduationValue3);
+
+    localStorage.setItem('title', titleValue);
+    localStorage.setItem('employer', employerValue);
+    localStorage.setItem('description', descriptionValue);
+
+    localStorage.setItem('title2', titleValue2);
+    localStorage.setItem('employer2', employerValue2);
+    localStorage.setItem('description2', descriptionValue2);
+
+    localStorage.setItem('title3', titleValue3);
+    localStorage.setItem('employer3', employerValue3);
+    localStorage.setItem('description3', descriptionValue3);
+
+    localStorage.setItem('skill', skillValue);
+
+    window.location.href = "preview.html";
+})
