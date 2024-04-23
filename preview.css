@@ -16,6 +16,10 @@ h1 {
     color: rgb(131, 131, 131);
 }
 
+h2{
+    font-size: 36px;
+}
+
 button.home {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -58,21 +62,13 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: rgb(131, 131, 131);
-    border-style: solid;
+    align-self: center;
     padding: 25px 48px;
     margin: 48px;
+    width: 700px;
 }
 
-.objective{
-    align-self: flex-start;
-}
-
-.education{
-    align-self: flex-start;
-}
-
-.pdf{
+#pdf{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -84,9 +80,78 @@ section{
     cursor: pointer;
     position: absolute;
     right: 200px;
-    top: 230px;
+    top: 500px;
 }
 
-.pdf:hover{
+#pdf:hover{
     background-color: rgb(0, 150, 209, 0.8);
+}
+
+hr{
+    border-bottom: 2px solid rgb(131, 131, 131);
+    padding: 0 300px;
+}
+
+.contact-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.objective-statement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.objective-statement h3{
+    align-self: flex-start;
+    font-size: 24px;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.education h3{
+    align-self: flex-start;
+    font-size: 24px;
+}
+
+.school-block{
+    padding-bottom: 10px;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience h3{
+    align-self: flex-start;
+    font-size: 24px;
+}
+
+.experience-block{
+    padding-top: 10px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skills h3{
+    align-self: flex-start;
+    font-size: 24px;
+}
+
+.skill-block{
+    padding-bottom: 10px;
 }

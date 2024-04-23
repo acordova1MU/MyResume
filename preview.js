@@ -39,7 +39,6 @@ const description3 = localStorage.getItem('description3');
 //Skills
 const skill = localStorage.getItem('skill');
 
-
 document.getElementById('name').textContent = namePreview;
 document.getElementById('email').textContent = email;
 document.getElementById('phone').textContent = phone;
@@ -76,3 +75,7 @@ document.getElementById('description3').textContent = description3;
 document.getElementById('skill').textContent = skill;
 
 //Using PDF Library
+function generatePDF(){
+    var element = document.getElementById("resume-container");
+    html2pdf(element);
+}
