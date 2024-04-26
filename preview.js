@@ -38,6 +38,8 @@ const description3 = localStorage.getItem('description3');
 
 //Skills
 const skill = localStorage.getItem('skill');
+const skill2 = localStorage.getItem('skill2');
+const skill3 = localStorage.getItem('skill3');
 
 document.getElementById('name').textContent = namePreview;
 document.getElementById('email').textContent = email;
@@ -73,6 +75,8 @@ document.getElementById('employer3').textContent = employer3;
 document.getElementById('description3').textContent = description3;
 
 document.getElementById('skill').textContent = skill;
+document.getElementById('skill2').textContent = skill2;
+document.getElementById('skill3').textContent = skill3;
 
 //Using PDF Library
 function generatePDF(){

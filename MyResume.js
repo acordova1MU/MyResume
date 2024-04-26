@@ -1,5 +1,6 @@
 //Creating Dynamic Fields
 //Education
+/*
 const addSchoolBtn = document.querySelector("form .add-school");
 const education = document.querySelector("form .education");
 const eduBtns = document.querySelector("form .education-buttons");
@@ -136,6 +137,7 @@ function deleteExperience() {
 
 addExperienceBtn.addEventListener("click", addExperience);
 addSchoolBtn.addEventListener("click", addSchool);
+*/
 
 //Dynamic Multi-Step Form Functionality
 const steps = Array.from(document.querySelectorAll("form .step"));
@@ -213,6 +215,8 @@ const description3 = document.getElementById('description3');
 
 //Skills
 const skill = document.getElementById('skill');
+const skill2 = document.getElementById('skill2');
+const skill3 = document.getElementById('skill3');
 
 
 form.addEventListener('submit', function(e) {
@@ -256,6 +260,8 @@ form.addEventListener('submit', function(e) {
     
     //Skills
     const skillValue = skill.value;
+    const skillValue2 = skill2.value;
+    const skillValue3 = skill3.value;
 
     localStorage.setItem('name', nameValue);
     localStorage.setItem('email', emailValue);
@@ -291,6 +297,8 @@ form.addEventListener('submit', function(e) {
     localStorage.setItem('description3', descriptionValue3);
 
     localStorage.setItem('skill', skillValue);
+    localStorage.setItem('skill2', skillValue2);
+    localStorage.setItem('skill3', skillValue3);
 
     window.location.href = "preview.html";
 })
